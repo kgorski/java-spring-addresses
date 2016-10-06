@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'addresses'
+    version =  '1.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework:spring-orm:4.3.3.RELEASE")
+    compile("org.hibernate:hibernate-core:5.2.2.Final")
+    compile("commons-dbcp:commons-dbcp:1.4")
+    compile("mysql:mysql-connector-java:5.1.6")
+    testCompile("junit:junit")
+}

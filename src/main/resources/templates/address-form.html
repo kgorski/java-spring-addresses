@@ -1,0 +1,16 @@
+<html layout:decorator="layout">
+    <head>
+        <title>Add Address form</title>
+    </head>
+    <div layout:fragment="content">
+	    <h1>Add address form</h1>
+
+        <form action="#" th:action="@{/address-create}" th:object="${address}" method="post">
+	        <div>Street <input type="text" th:field="*{street}" /></div>
+	        <div>ZIP <input type="text" th:field="*{zip}" /></div>
+	        <div>City <input type="text" th:field="*{city}" /></div>
+	        <div>Country <input type="text" th:field="*{country}" /></div>
+            <div><input type="submit" value="Submit" /></div>
+	    </form>
+    </div>
+</html>
