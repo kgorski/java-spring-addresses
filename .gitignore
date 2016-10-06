@@ -69,4 +69,4 @@ pom.xml.next
 release.properties
 
 build/
-src/main/resources/application.properties
+application.properties
